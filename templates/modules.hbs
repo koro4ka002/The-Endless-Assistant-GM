@@ -1,0 +1,36 @@
+{{#if modules.length}}
+<div class="ea-list">
+  {{#each modules}}
+  <div class="ea-list__row ea-gm-module-row" data-feature-id="{{this.id}}">
+    <div class="ea-gm-module-info">
+      {{#if this.icon}}<i class="{{this.icon}} ea-gm-module-icon"></i>{{/if}}
+      <div class="ea-list__content">
+        <div class="ea-list__title">{{localize this.titleKey}}</div>
+        {{#if this.descriptionKey}}
+        <div class="ea-list__description">{{localize this.descriptionKey}}</div>
+        {{/if}}
+      </div>
+    </div>
+    <div class="ea-gm-module-controls">
+      <label class="ea-toggle">
+        <input type="checkbox" class="ea-toggle__input ea-feature-toggle-enabled" data-action="toggleEnabled" data-feature-id="{{this.id}}" {{#if this.enabled}}checked{{/if}}>
+        <span class="ea-toggle__slider"></span>
+        <span class="ea-toggle__label">{{localize "ENDLESS.gm.modules.enabled"}}</span>
+      </label>
+      {{#if this.canChangeVisibility}}
+      <label class="ea-toggle">
+        <input type="checkbox" class="ea-toggle__input ea-feature-toggle-visibility" data-action="toggleVisibleToPlayers" data-feature-id="{{this.id}}" {{#if this.visibleToPlayers}}checked{{/if}}>
+        <span class="ea-toggle__slider"></span>
+        <span class="ea-toggle__label">{{localize "ENDLESS.gm.modules.visibleToPlayers"}}</span>
+      </label>
+      {{/if}}
+    </div>
+  </div>
+  {{/each}}
+</div>
+{{else}}
+<div class="ea-empty">
+  <i class="fa-solid fa-box-open ea-empty__icon"></i>
+  <span class="ea-empty__text">{{localize "ENDLESS.gm.modules.empty"}}</span>
+</div>
+{{/if}}

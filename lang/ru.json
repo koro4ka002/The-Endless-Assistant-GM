@@ -1,0 +1,13 @@
+{
+  "ENDLESS.gm.title": "Бесконечный ассистент: Мастер",
+  "ENDLESS.gm.noAccess": "Недостаточно прав для доступа к оболочке Мастера.",
+  "ENDLESS.gm.nav.home": "Главная",
+  "ENDLESS.gm.nav.modules": "Модули",
+  "ENDLESS.gm.home.title": "Панель управления Мастера",
+  "ENDLESS.gm.home.welcome": "Добро пожаловать в центр управления ассистентом.",
+  "ENDLESS.gm.home.activeModules": "Включённых модулей",
+  "ENDLESS.gm.modules.title": "Управление модулями",
+  "ENDLESS.gm.modules.enabled": "Включён",
+  "ENDLESS.gm.modules.visibleToPlayers": "Показывать игрокам",
+  "ENDLESS.gm.modules.empty": "Модулей пока нет"
+}

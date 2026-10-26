@@ -1,0 +1,120 @@
+.ea-root.ea-gm-shell-window {
+  min-width: 600px;
+  min-height: 420px;
+}
+
+.ea-root.ea-gm-shell-window .window-content {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.ea-gm-layout {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--ea-space-md);
+  gap: var(--ea-space-md);
+  overflow: hidden;
+}
+
+.ea-gm-sidebar {
+  width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.ea-gm-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ea-space-xs);
+  height: 100%;
+  overflow-y: auto;
+  margin-bottom: 0;
+}
+
+.ea-gm-nav .ea-nav__item {
+  display: flex;
+  align-items: center;
+  gap: var(--ea-space-sm);
+  width: 100%;
+  text-align: left;
+  border-radius: var(--ea-radius-sm);
+}
+
+.ea-gm-nav .ea-nav__item i {
+  width: 18px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.ea-gm-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.ea-gm-panel {
+  flex: 1;
+  margin-bottom: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ea-space-md);
+}
+
+.ea-gm-home-stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ea-space-xs);
+}
+
+.ea-gm-home-stat__value {
+  font-family: var(--ea-font-heading);
+  font-size: var(--ea-font-size-xl);
+  color: var(--ea-brass-light);
+  font-weight: 700;
+}
+
+.ea-gm-module-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ea-space-md);
+}
+
+.ea-gm-module-info {
+  display: flex;
+  align-items: center;
+  gap: var(--ea-space-md);
+  min-width: 0;
+  flex: 1;
+}
+
+.ea-gm-module-icon {
+  font-size: var(--ea-font-size-xl);
+  color: var(--ea-brass);
+  flex-shrink: 0;
+  width: 24px;
+  text-align: center;
+}
+
+.ea-gm-module-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--ea-space-md);
+  flex-shrink: 0;
+}
+
+.ea-gm-feature-mount {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}

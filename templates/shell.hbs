@@ -1,0 +1,42 @@
+<div class="ea-gm-layout">
+  <aside class="ea-gm-sidebar">
+    <nav class="ea-nav ea-gm-nav">
+      <button type="button" class="ea-nav__item {{#if isHome}}ea-nav__item--active is-active{{/if}}" data-action="switchTab" data-tab="home">
+        <i class="fa-solid fa-house"></i>
+        <span>{{localize "ENDLESS.gm.nav.home"}}</span>
+      </button>
+      <button type="button" class="ea-nav__item {{#if isModules}}ea-nav__item--active is-active{{/if}}" data-action="switchTab" data-tab="modules">
+        <i class="fa-solid fa-cubes"></i>
+        <span>{{localize "ENDLESS.gm.nav.modules"}}</span>
+      </button>
+      {{#each features}}
+      <button type="button" class="ea-nav__item {{#if this.isActive}}ea-nav__item--active is-active{{/if}}" data-action="switchTab" data-tab="{{this.id}}">
+        {{#if this.icon}}<i class="{{this.icon}}"></i>{{/if}}
+        <span>{{localize this.titleKey}}</span>
+      </button>
+      {{/each}}
+    </nav>
+  </aside>
+  <main class="ea-gm-main">
+    <div class="ea-panel ea-gm-panel">
+      {{#if isHome}}
+      <div class="ea-plate">
+        <h2>{{localize "ENDLESS.gm.home.title"}}</h2>
+        <p>{{localize "ENDLESS.gm.home.welcome"}}</p>
+      </div>
+      <div class="ea-gm-home-stat">
+        <span>{{localize "ENDLESS.gm.home.activeModules"}}:</span>
+        <span class="ea-gm-home-stat__value">{{activeCount}}</span>
+      </div>
+      {{/if}}
+
+      {{#if isModules}}
+      {{> "modules/endless-assistant-gm/templates/modules.hbs"}}
+      {{/if}}
+
+      {{#if isFeature}}
+      <div class="ea-gm-feature-mount" data-feature-id="{{activeTab}}"></div>
+      {{/if}}
+    </div>
+  </main>
+</div>
